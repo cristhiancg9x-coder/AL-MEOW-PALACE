@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGrad1" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1F1A12"/>
+      <stop offset="100%" stop-color="#0A0A0C"/>
+    </radialGradient>
+    <linearGradient id="gold1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0BE"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#8C5C0D"/>
+    </linearGradient>
+    <linearGradient id="fur1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5A25D"/>
+      <stop offset="50%" stop-color="#E2782A"/>
+      <stop offset="100%" stop-color="#B34B0B"/>
+    </linearGradient>
+    <linearGradient id="turbanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#E5E0D5"/>
+      <stop offset="100%" stop-color="#C2B7A3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" rx="24" fill="url(#bgGrad1)"/>
+  
+  <!-- Islamic geometric pattern halo -->
+  <circle cx="200" cy="200" r="160" fill="none" stroke="url(#gold1)" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.4"/>
+  <circle cx="200" cy="200" r="175" fill="none" stroke="url(#gold1)" stroke-width="0.75" opacity="0.25"/>
+
+  <!-- Royal Robes -->
+  <path d="M 110 380 Q 200 320 290 380 L 290 400 L 110 400 Z" fill="#132B18" stroke="url(#gold1)" stroke-width="3"/>
+  <!-- Gold trim of cloak -->
+  <path d="M 160 350 L 200 400 L 240 350" fill="none" stroke="url(#gold1)" stroke-width="6"/>
+
+  <!-- Cat Body -->
+  <path d="M 130 380 C 130 280, 150 250, 200 250 C 250 250, 270 280, 270 380 Z" fill="url(#fur1)"/>
+  
+  <!-- Cat Head -->
+  <ellipse cx="200" cy="220" rx="72" ry="65" fill="url(#fur1)"/>
+
+  <!-- Cheeks & Snout -->
+  <ellipse cx="185" cy="242" rx="20" ry="15" fill="#FFE2C7"/>
+  <ellipse cx="215" cy="242" rx="20" ry="15" fill="#FFE2C7"/>
+  <polygon points="200,234 194,228 206,228" fill="#D36B6B"/>
+
+  <!-- Eyes - Emerald Sheikh Eyes -->
+  <ellipse cx="172" cy="208" rx="14" ry="18" fill="#046307"/>
+  <ellipse cx="228" cy="208" rx="14" ry="18" fill="#046307"/>
+  <ellipse cx="172" cy="208" rx="4" ry="14" fill="#000000"/>
+  <ellipse cx="228" cy="208" rx="4" ry="14" fill="#000000"/>
+  <circle cx="169" cy="203" r="3.5" fill="#FFFFFF"/>
+  <circle cx="225" cy="203" r="3.5" fill="#FFFFFF"/>
+
+  <!-- Whiskers -->
+  <path d="M 165 240 L 95 230 M 165 245 L 90 245 M 165 250 L 100 260" stroke="#FFE2C7" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 235 240 L 305 230 M 235 245 L 310 245 M 235 250 L 300 260" stroke="#FFE2C7" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Ears sticking out under Turban -->
+  <polygon points="128,190 148,135 170,175" fill="url(#fur1)"/>
+  <polygon points="135,185 150,145 165,175" fill="#FFCBB0"/>
+  <polygon points="272,190 252,135 230,175" fill="url(#fur1)"/>
+  <polygon points="265,185 250,145 235,175" fill="#FFCBB0"/>
+
+  <!-- Royal Sheikh Turban (Ghutra / Emiri Turban) -->
+  <path d="M 130 170 C 130 100, 270 100, 270 170 C 275 185, 260 195, 200 195 C 140 195, 125 185, 130 170 Z" fill="url(#turbanGrad)" stroke="url(#gold1)" stroke-width="2"/>
+  <path d="M 140 150 C 170 120, 230 120, 260 150" fill="none" stroke="#D1C7B5" stroke-width="3"/>
+  
+  <!-- Golden Brooch with Huge Emerald -->
+  <g transform="translate(200, 155)">
+    <circle cx="0" cy="0" r="14" fill="url(#gold1)"/>
+    <polygon points="0,-16 12,-4 0,8 -12,-4" fill="#046307"/>
+    <circle cx="0" cy="-4" r="3" fill="#A7F3D0"/>
+    <!-- Golden Feather -->
+    <path d="M 0 -16 C -10 -40, 5 -55, 15 -70 C 10 -50, 15 -30, 0 -16 Z" fill="url(#gold1)"/>
+  </g>
+
+  <!-- Tag / Name Plate -->
+  <rect x="75" y="340" width="250" height="42" rx="21" fill="rgba(10, 10, 12, 0.85)" stroke="url(#gold1)" stroke-width="1.5"/>
+  <text x="200" y="367" font-family="'Cinzel', serif" font-size="16" font-weight="700" fill="url(#gold1)" text-anchor="middle" letter-spacing="2">
+    SULTÁN OLIVER I
+  </text>
+</svg>

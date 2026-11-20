@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGrad2" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#191522"/>
+      <stop offset="100%" stop-color="#0A0A0C"/>
+    </radialGradient>
+    <linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5D0"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#916515"/>
+    </linearGradient>
+    <linearGradient id="fur2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D2B35"/>
+      <stop offset="50%" stop-color="#1B1921"/>
+      <stop offset="100%" stop-color="#0E0D12"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="400" rx="24" fill="url(#bgGrad2)"/>
+  
+  <!-- Geometric Mandala -->
+  <circle cx="200" cy="190" r="160" fill="none" stroke="url(#gold2)" stroke-width="1.5" stroke-dasharray="3 6" opacity="0.4"/>
+  <polygon points="200,40 330,190 200,340 70,190" fill="none" stroke="url(#gold2)" stroke-width="0.8" opacity="0.3"/>
+  <polygon points="200,55 315,190 200,325 85,190" fill="none" stroke="url(#gold2)" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Royal Velvet Cape -->
+  <path d="M 100 380 Q 200 300 300 380 L 300 400 L 100 400 Z" fill="#2E103A" stroke="url(#gold2)" stroke-width="2.5"/>
+
+  <!-- Cat Body -->
+  <path d="M 140 380 C 140 270, 160 230, 200 230 C 240 230, 260 270, 260 380 Z" fill="url(#fur2)"/>
+
+  <!-- Egyptian Style Gold Pectoral Collar -->
+  <path d="M 145 285 Q 200 330 255 285 Q 200 370 145 285 Z" fill="url(#gold2)"/>
+  <!-- Inlaid emerald jewels -->
+  <circle cx="170" cy="310" r="4" fill="#046307"/>
+  <circle cx="200" cy="325" r="6" fill="#046307"/>
+  <circle cx="230" cy="310" r="4" fill="#046307"/>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="200" rx="65" ry="60" fill="url(#fur2)"/>
+
+  <!-- Tall Egyptian Cat Ears -->
+  <polygon points="140,180 150,105 185,160" fill="url(#fur2)"/>
+  <polygon points="148,175 155,115 180,160" fill="#4B3A5A"/>
+  <polygon points="260,180 250,105 215,160" fill="url(#fur2)"/>
+  <polygon points="252,175 245,115 220,160" fill="#4B3A5A"/>
+
+  <!-- Glowing Topaz & Emerald Eyes -->
+  <ellipse cx="174" cy="190" rx="14" ry="16" fill="#10B981"/>
+  <ellipse cx="226" cy="190" rx="14" ry="16" fill="#10B981"/>
+  <ellipse cx="174" cy="190" rx="4" ry="13" fill="#000000"/>
+  <ellipse cx="226" cy="190" rx="4" ry="13" fill="#000000"/>
+  <circle cx="171" cy="186" r="3" fill="#FFFFFF"/>
+  <circle cx="223" cy="186" r="3" fill="#FFFFFF"/>
+  <!-- Egyptian eyeliner wings (Kohl) -->
+  <path d="M 160 192 L 140 188 M 240 192 L 260 188" stroke="url(#gold2)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Nose & Snout -->
+  <polygon points="200,215 195,208 205,208" fill="#583C5A"/>
+  <path d="M 195 216 Q 200 222 205 216" stroke="#583C5A" stroke-width="1.5" fill="none"/>
+
+  <!-- Whiskers -->
+  <path d="M 165 220 L 95 215 M 165 226 L 90 228 M 165 232 L 100 240" stroke="url(#gold2)" stroke-width="1.2" opacity="0.8"/>
+  <path d="M 235 220 L 305 215 M 235 226 L 310 228 M 235 232 L 300 240" stroke="url(#gold2)" stroke-width="1.2" opacity="0.8"/>
+
+  <!-- Royal Princess Tiara -->
+  <path d="M 170 148 L 180 120 L 200 135 L 220 120 L 230 148 Z" fill="url(#gold2)"/>
+  <circle cx="200" cy="135" r="3.5" fill="#046307"/>
+  <circle cx="180" cy="120" r="2.5" fill="#FFF"/>
+  <circle cx="220" cy="120" r="2.5" fill="#FFF"/>
+
+  <!-- Name Plate -->
+  <rect x="75" y="340" width="250" height="42" rx="21" fill="rgba(10, 10, 12, 0.85)" stroke="url(#gold2)" stroke-width="1.5"/>
+  <text x="200" y="367" font-family="'Cinzel', serif" font-size="16" font-weight="700" fill="url(#gold2)" text-anchor="middle" letter-spacing="2">
+    PRINCESA CLEO
+  </text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGrad4" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1F1510"/>
+      <stop offset="100%" stop-color="#0A0A0C"/>
+    </radialGradient>
+    <linearGradient id="gold4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5D6"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#8D5F13"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="400" rx="24" fill="url(#bgGrad4)"/>
+
+  <!-- Halo arches -->
+  <circle cx="200" cy="190" r="160" fill="none" stroke="url(#gold4)" stroke-width="1.5" stroke-dasharray="3 5" opacity="0.35"/>
+  <circle cx="200" cy="190" r="140" fill="none" stroke="url(#gold4)" stroke-width="0.8" opacity="0.2"/>
+
+  <!-- Royal Silk Robes -->
+  <path d="M 100 380 Q 200 320 300 380 L 300 400 L 100 400 Z" fill="#451A03" stroke="url(#gold4)" stroke-width="2.5"/>
+
+  <!-- Multi-strand Pearl Necklace -->
+  <path d="M 140 310 Q 200 360 260 310" fill="none" stroke="#FFF" stroke-width="5" stroke-dasharray="6 7"/>
+  <path d="M 150 325 Q 200 375 250 325" fill="none" stroke="url(#gold4)" stroke-width="4" stroke-dasharray="5 6"/>
+  <circle cx="200" cy="355" r="7" fill="#046307" stroke="url(#gold4)" stroke-width="1.5"/>
+
+  <!-- Calico Cat Body -->
+  <path d="M 130 380 C 130 280, 150 240, 200 240 C 250 240, 270 280, 270 380 Z" fill="#F8FAFC"/>
+  <!-- Calico patches on body -->
+  <path d="M 130 330 Q 170 300 160 380 Z" fill="#EA580C"/>
+  <path d="M 270 340 Q 230 320 250 380 Z" fill="#1E293B"/>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="210" rx="68" ry="60" fill="#FFFFFF"/>
+  <!-- Calico patch over left eye & ear -->
+  <path d="M 140 180 C 140 160, 170 170, 195 190 C 180 230, 140 230, 140 180 Z" fill="#D97706"/>
+  <!-- Calico patch over right ear -->
+  <path d="M 230 170 C 250 170, 268 180, 265 210 C 240 215, 230 190, 230 170 Z" fill="#1E293B"/>
+
+  <!-- Ears -->
+  <polygon points="135,185 145,115 180,165" fill="#D97706"/>
+  <polygon points="142,175 150,128 172,165" fill="#FECDD3"/>
+  <polygon points="265,185 255,115 220,165" fill="#1E293B"/>
+  <polygon points="258,175 250,128 228,165" fill="#FECDD3"/>
+
+  <!-- Eyes - Amber / Hazel Queen Eyes -->
+  <ellipse cx="172" cy="200" rx="13" ry="16" fill="#F59E0B"/>
+  <ellipse cx="228" cy="200" rx="13" ry="16" fill="#F59E0B"/>
+  <ellipse cx="172" cy="200" rx="4" ry="12" fill="#000000"/>
+  <ellipse cx="228" cy="200" rx="4" ry="12" fill="#000000"/>
+  <circle cx="169" cy="196" r="3" fill="#FFFFFF"/>
+  <circle cx="225" cy="196" r="3" fill="#FFFFFF"/>
+
+  <!-- Muzzle -->
+  <polygon points="200,222 194,215 206,215" fill="#FB7185"/>
+  <path d="M 194 223 Q 200 230 206 223" stroke="#F43F5E" stroke-width="1.5" fill="none"/>
+
+  <!-- Whiskers -->
+  <path d="M 165 224 L 95 218 M 165 230 L 90 232 M 165 236 L 98 244" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 235 224 L 305 218 M 235 230 L 310 232 M 235 236 L 302 244" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Royal Arabian Filigree Crown / Turban Diadem -->
+  <path d="M 160 152 Q 200 120 240 152 L 230 162 Q 200 135 170 162 Z" fill="url(#gold4)"/>
+  <polygon points="200,118 206,132 194,132" fill="url(#gold4)"/>
+  <circle cx="200" cy="115" r="3.5" fill="#10B981"/>
+  <circle cx="178" cy="136" r="2.5" fill="#EF4444"/>
+  <circle cx="222" cy="136" r="2.5" fill="#EF4444"/>
+
+  <!-- Name Plate -->
+  <rect x="75" y="340" width="250" height="42" rx="21" fill="rgba(10, 10, 12, 0.85)" stroke="url(#gold4)" stroke-width="1.5"/>
+  <text x="200" y="367" font-family="'Cinzel', serif" font-size="16" font-weight="700" fill="url(#gold4)" text-anchor="middle" letter-spacing="2">
+    DAMA NALA
+  </text>
+</svg>
