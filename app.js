@@ -9,26 +9,33 @@
 'use strict';
 
 /* ==============================================================================
-   0. CONFIGURACIÓN CENTRALIZADA DE PAGOS & CRIPTO (BINANCE / WEB3 VIP)
-   Modifica aquí tus datos reales de Binance, Wallets y Cuentas para Mr. Gean
+   0. CONFIGURACIÓN CENTRALIZADA DE PAGOS & CONTACTO OFICIAL
+   Mr. Gean & The Royal Felines — Al-Meow Palace
    ============================================================================== */
 const PAYMENT_CONFIG = {
-  // Criptomonedas / Binance Web3 VIP
-  usdtAddress: "TY7eKx9Pq2W8mN4vLtZ5rD1sX3cF6hG8jK", // Dirección USDT (TRC20 / BEP20)
-  usdtNetwork: "TRC20 / BEP20 (USDT)",
-  btcAddress: "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh", // Dirección Bitcoin nativo (BTC)
-  binancePayId: "847291045", // Binance Pay ID de Mr. Gean
-  
-  // Métodos Bancarios y Fiat
-  paypalEmail: "mrgean@almeowpalace.com",
-  paypalMeUrl: "https://paypal.me/MrGean",
-  bcpSwift: "BCPLPEPL",
-  bcpAccountUsd: "193-87654321-1-42",
-  bcpCciUsd: "00219318765432114218",
-  bcpAccountSoles: "193-98765432-0-15",
-  bcpCciSoles: "00219319876543201588",
-  yapePhone: "+51 987 654 321",
-  beneficiaryName: "Mr. Gean"
+  // Titular & Contacto Oficial
+  creatorName: "Mr. Gean",
+  beneficiaryName: "Mr. Gean",
+  officialEmail: "donacionparagatitos@gmail.com",
+
+  // PayPal Internacional
+  paypalEmail: "zqpswe@gmail.com",
+  paypalUrl: "https://www.paypal.com/donate/?business=zqpswe@gmail.com&currency_code=USD",
+
+  // Criptomonedas VIP (2 Monedas)
+  usdtNetwork: "Tron (TRC20)",
+  usdtAddress: "TPQxqrk4vTg7uvPciY3PLF3LaeCobEQvyf",
+  usdtQrImg: "assets/qr-usdt.jpeg",
+
+  btcNetwork: "Bitcoin (BTC)",
+  btcAddress: "16knqtZoFVvfWaUUFMAmm13T6vsdrCDGdd",
+  btcQrImg: "assets/qr-btc.jpeg",
+
+  // Cuentas Bancarias Perú (BCP Soles)
+  bcpAccountSoles1: "21504187354046",
+  bcpCciSoles1: "00221510418735404625",
+  bcpAccountSoles2: "21599723814020",
+  bcpCciSoles2: "00221519972381402022"
 };
 
 /* ==============================================================================
@@ -318,48 +325,35 @@ const I18N = {
       paypalSub: "Donación inmediata con tarjeta de crédito/débito global o balance",
       paypalDesc: "El método más rápido y directo para benefactores internacionales. Conviértete en mecenas en un solo clic con protección al comprador.",
       paypalEmailLabel: "Correo Oficial de PayPal:",
-      paypalBtn: "Ofrendar vía PayPal.Me",
-      wireTitle: "Transferencia Bancaria Internacional (USD Wire Transfer)",
-      wireSub: "Banco de Crédito del Perú (BCP) • Para donaciones desde Dubái y todo el mundo",
-      wireDesc: "Canal bancario de ultra-confianza para magnates y transferencias internacionales directas vía código SWIFT/BIC.",
-      bankNameLabel: "Banco Receptor:",
-      bankNameValue: "Banco de Crédito del Perú (BCP) - Lima, Perú",
-      beneficiaryLabel: "Nombre del Titular (Beneficiario):",
-      swiftLabel: "Código SWIFT / BIC:",
-      accountUsdLabel: "Número de Cuenta Dólares (USD):",
-      cciUsdLabel: "Código Interbancario CCI (USD):",
+      paypalBtn: "Ofrendar vía PayPal",
       cryptoTitle: "Criptomonedas / Web3 VIP",
-      cryptoSub: "USDT • Bitcoin • Binance Pay",
+      cryptoSub: "USDT (TRC20) • Bitcoin (BTC)",
       cryptoBadge: "Instantáneo • Sin Límites",
       cryptoDesc: "Ideal para grandes ofrendas sin límites bancarios ni restricciones geográficas. Transferencias directas de $10,000 a $1,000,000 USD con confirmación inmediata.",
       cryptoNetworkLabel: "Red Soportada:",
       cryptoAddressLabel: "Dirección de Billetera USDT:",
       btcAddressLabel: "Dirección de Billetera Bitcoin (BTC):",
-      binancePayIdLabel: "Binance Pay ID (Mr. Gean):",
-      usdtWarning: "⚠️ Asegúrate de enviar solo por la red indicada (TRC20 o BEP20).",
+      usdtWarning: "⚠️ Asegúrate de enviar únicamente por la red Tron (TRC20).",
       btcWarning: "⚠️ Envía únicamente Bitcoin nativo (BTC) a esta dirección.",
-      binanceWarning: "✦ Transferencia directa e instantánea entre cuentas Binance sin comisiones de red.",
       qrScanCrypto: "Escanear para depositar USDT",
       qrScanBtc: "Escanear para depositar Bitcoin",
-      qrScanBinance: "Escanear con Binance App",
       copiedCryptoToast: "¡Dirección copiada al portapapeles, Habibi! 💎⚡",
       copy: "Copiar",
       copiedToast: "¡Copiado al portapapeles, Habibi! 👑",
-      peruAccordionTitle: "🇵🇪 ¿Apoyas desde Perú? (Yape / BCP Soles)",
-      peruAccordionDesc: "Si deseas enviar tu tributo en moneda local desde Perú, abre este panel para transferir por Yape o BCP Cuenta Soles:",
-      yapeTitle: "Billetera Digital Yape (Perú)",
-      yapeSub: "Transferencia instantánea en Soles sin comisiones",
-      phoneLabel: "Número Celular Yape:",
-      qrCaption: "Escanea con tu App Yape",
-      bcpSolesTitle: "BCP Cuenta de Ahorros Soles (PEN)",
+      peruAccordionTitle: "🇵🇪 ¿Apoyas desde Perú? (Cuentas BCP Soles)",
+      peruAccordionDesc: "Si deseas enviar tu tributo en moneda local desde Perú, realiza tu transferencia a cualquiera de nuestras dos cuentas BCP en Soles:",
+      bcpAccount1Title: "BCP Cuenta de Ahorros Soles 1",
+      bcpAccount2Title: "BCP Cuenta de Ahorros Soles 2",
+      bcpSubtitle: "Banco de Crédito del Perú • Soles",
+      beneficiaryLabel: "Nombre del Titular:",
       bcpSolesLabel: "Número de Cuenta Soles:",
-      bcpSolesCciLabel: "Código Interbancario Soles (CCI):",
+      bcpSolesCciLabel: "Código Interbancario (CCI):",
       claimBadge: "👑 AUDIENCIA CON MR. GEAN & LA CORTE",
       claimTitle: "¿Ya enviaste tu ofrenda real?",
       claimSubtitle: "Reclama tu posición en el Trono de los Jeques y el bautizo de tu espacio en la Finca Santuario. Envía tu comprobante con tu apodo nobiliario y bandera.",
-      claimThroneBtn: "Reclamar mi lugar en el Trono",
-      claimEmailBtn: "Enviar Comprobante por Correo",
-      whatsappMsg: "¡Salam Aleikum Mr. Gean! Acabo de enviar un tributo real para los 9 gatitos y la Finca Santuario de Al-Meow Palace. Adjunto mi comprobante para reclamar mi puesto en el Trono 👑"
+      claimThroneBtn: "Ya doné, reclamar mi lugar en el Trono",
+      emailSubject: "Reclamo de Trono - Al-Meow Palace | Mr. Gean",
+      emailBody: "¡Salam Aleikum Mr. Gean!\n\nAcabo de realizar un tributo real para el cuidado de los 9 gatitos y el fondo de la Finca Santuario de Al-Meow Palace.\n\nAdjunto en este correo mi comprobante de pago con los siguientes datos para mi lugar en el Trono:\n- Nombre / Título Nobiliario (Jeque, Sultán o Emir): \n- País o Bandera: \n- Monto donado y método utilizado: \n\n¡Gloria a los 9 gatos de la realeza!"
     },
     faq: {
       tag: "✦ TRANSPARENCIA DE LA CORTE ✦",
@@ -370,7 +364,7 @@ const I18N = {
       q2: "¿Qué es la Finca Santuario y qué derechos otorga donar a ella?",
       a2: "Es el proyecto de vida de Mr. Gean: una propiedad rural amplia y protegida donde estos 9 felinos y cientos de futuros gatos rescatados de la calle vivirán en libertad absoluta, sin jaulas y con atención médica de por vida. Donaciones a partir de $10,000 USD garantizan tu nombre en el Muro de Honor físico, y donaciones de $100,000 o $1,000,000 USD otorgan el derecho a bautizar el Pabellón Principal o el Santuario entero con tu nombre.",
       q3: "¿Cómo aparezco en el Leaderboard de los Jeques?",
-      a3: "Una vez realizada tu ofrenda mediante PayPal, Transferencia Internacional SWIFT, Yape o BCP, haz clic en el botón 'Reclamar mi lugar en el Trono' para enviar tu comprobante a Mr. Gean. Podrás indicar tu nombre o alias nobiliario y la bandera de tu nación para actualizar el podio.",
+      a3: "Una vez realizada tu ofrenda mediante Criptomonedas, PayPal o BCP Soles, haz clic en el botón 'Ya doné, reclamar mi lugar en el Trono' para enviar tu comprobante por correo a Mr. Gean. Podrás indicar tu nombre o alias nobiliario y la bandera de tu nación para actualizar el podio.",
       q4: "¿Los 9 gatos son reales?",
       a4: "Absolutamente reales, rescatados con amor y dedicación. Gatito, Naranjosa, Tomy, Manchas y los 5 recién nacidos conviven bajo la custodia personal de Mr. Gean. La temática satírica y de opulencia de Dubái es nuestro homenaje lúdico y digno para inspirar la generosidad de almas nobles sin recurrir a la lástima."
     },
@@ -378,6 +372,8 @@ const I18N = {
       tagline: "El santuario donde 9 almas felinas son adoradas y los grandes mecenas forjan un legado eterno de compasión.",
       navTitle: "Navegación Real",
       contactTitle: "Contacto Oficial",
+      location: "Lima, Perú (Sede Central del Santuario)",
+      audiences: "Audiencias con Mr. Gean & Corte Real previa cita",
       disclaimerTitle: "📜 Decreto Real de Transparencia:",
       disclaimerText: "Al-Meow Palace es una iniciativa independiente creada por Mr. Gean con el fin primordial de salvar, nutrir y dar una vida digna a 9 gatos rescatados y consolidar el fondo para la Finca Santuario. Ningún felino fue obligado a lucir coronas de oro macizo durante la creación de este portal.",
       copyText: "Todos los derechos ronroneados y reservados en los siete emiratos.",
@@ -553,48 +549,35 @@ const I18N = {
       paypalSub: "Instant donation with global credit/debit card or balance",
       paypalDesc: "The quickest, most trusted channel for international patrons. Become a royal benefactor in seconds with comprehensive buyer protection.",
       paypalEmailLabel: "Official PayPal Email:",
-      paypalBtn: "Send Tribute via PayPal.Me",
-      wireTitle: "International Wire Transfer (USD SWIFT)",
-      wireSub: "Banco de Crédito del Perú (BCP) • For direct wire transfers from Dubai & worldwide",
-      wireDesc: "High-grade international banking channel for magnates and direct institutional SWIFT wire transfers.",
-      bankNameLabel: "Receiving Bank:",
-      bankNameValue: "Banco de Crédito del Perú (BCP) - Lima, Peru",
-      beneficiaryLabel: "Account Beneficiary Name:",
-      swiftLabel: "SWIFT / BIC Code:",
-      accountUsdLabel: "USD Account Number:",
-      cciUsdLabel: "Interbank CCI Code (USD):",
+      paypalBtn: "Send Tribute via PayPal",
       cryptoTitle: "Cryptocurrency / Web3 VIP",
-      cryptoSub: "USDT • Bitcoin • Binance Pay",
+      cryptoSub: "USDT (TRC20) • Bitcoin (BTC)",
       cryptoBadge: "Instant • Limitless",
       cryptoDesc: "Ideal for major endowments without banking limits or borders. Direct transfers from $10,000 to $1,000,000 USD with instant on-chain confirmation.",
       cryptoNetworkLabel: "Supported Network:",
       cryptoAddressLabel: "USDT Wallet Address:",
       btcAddressLabel: "Bitcoin (BTC) Wallet Address:",
-      binancePayIdLabel: "Binance Pay ID (Mr. Gean):",
-      usdtWarning: "⚠️ Please ensure you send only via the specified network (TRC20 or BEP20).",
+      usdtWarning: "⚠️ Please ensure you send only via the Tron (TRC20) network.",
       btcWarning: "⚠️ Send native Bitcoin (BTC) only to this address.",
-      binanceWarning: "✦ Direct, instant zero-fee transfer between Binance accounts.",
       qrScanCrypto: "Scan to deposit USDT",
       qrScanBtc: "Scan to deposit Bitcoin",
-      qrScanBinance: "Scan with Binance App",
       copiedCryptoToast: "Address copied to clipboard, Habibi! 💎⚡",
       copy: "Copy",
       copiedToast: "Copied to clipboard, Habibi! 👑",
-      peruAccordionTitle: "🇵🇪 Supporting from Peru? (Yape / BCP Soles)",
-      peruAccordionDesc: "If you wish to send your support locally within Peru, expand this section to transfer via Yape or BCP Soles account:",
-      yapeTitle: "Yape Mobile Wallet (Peru)",
-      yapeSub: "Instant zero-fee transfer in Peruvian Soles (PEN)",
-      phoneLabel: "Yape Phone Number:",
-      qrCaption: "Scan using your Yape mobile app",
-      bcpSolesTitle: "BCP Savings Account (Soles - PEN)",
+      peruAccordionTitle: "🇵🇪 Supporting from Peru? (BCP Soles Accounts)",
+      peruAccordionDesc: "If you wish to send your support locally within Peru, you can transfer to either of our two BCP Soles accounts:",
+      bcpAccount1Title: "BCP Savings Account Soles 1",
+      bcpAccount2Title: "BCP Savings Account Soles 2",
+      bcpSubtitle: "Banco de Crédito del Perú • Soles (PEN)",
+      beneficiaryLabel: "Account Beneficiary Name:",
       bcpSolesLabel: "Soles Account Number:",
-      bcpSolesCciLabel: "Interbank Soles Code (CCI):",
+      bcpSolesCciLabel: "Interbank CCI Code (Soles):",
       claimBadge: "👑 AUDIENCE WITH MR. GEAN & THE COURT",
       claimTitle: "Already sent your royal tribute?",
       claimSubtitle: "Claim your seat on the Throne of Sheikhs and secure your naming rights on the Farm Sanctuary. Send your receipt with your preferred title and country flag.",
-      claimThroneBtn: "Claim My Seat on the Throne",
-      claimEmailBtn: "Email Receipt",
-      whatsappMsg: "Salam Alaykum Mr. Gean! I have just sent a royal tribute for the 9 cats and the Farm Sanctuary of Al-Meow Palace. Here is my receipt to claim my seat on the Throne 👑"
+      claimThroneBtn: "I Have Donated, Claim My Seat on the Throne",
+      emailSubject: "Throne Claim - Al-Meow Palace | Mr. Gean",
+      emailBody: "Salam Alaykum Mr. Gean!\n\nI have just sent a royal tribute to support the 9 felines and fund the eternal Sanctuary Ranch of Al-Meow Palace.\n\nAttached to this email is my donation receipt, along with my details for my seat on the Throne:\n- Name / Noble Title (Sheikh, Sultan, or Emir): \n- Country / Flag: \n- Amount donated & Payment method: \n\nGlory to the 9 royal felines!"
     },
     faq: {
       tag: "✦ ROYAL TRANSPARENCY ✦",
@@ -605,7 +588,7 @@ const I18N = {
       q2: "What is the Farm Sanctuary and what rights does donating confer?",
       a2: "It is Mr. Gean's lifelong vision: an expansive countryside sanctuary where these 9 felines and hundreds of rescued street cats will live in safety and freedom forever. Tributes of $10,000 USD engrave your name on the physical Wall of Honor, and donations of $100,000 or $1,000,000 USD grant you the perpetual right to name the Main Pavilion or the entire Sanctuary after yourself.",
       q3: "How do I appear on the Sheikhs' Leaderboard?",
-      a3: "Once your tribute is made via PayPal, SWIFT Wire Transfer, Yape, or BCP, click 'Claim My Seat on the Throne' to send your screenshot to Mr. Gean. Provide your chosen noble moniker and country flag to update the podium.",
+      a3: "Once your tribute is made via Cryptocurrency, PayPal, or BCP Soles, click 'I Have Donated, Claim My Seat on the Throne' to email your receipt to Mr. Gean. Provide your chosen noble moniker and country flag to update the podium.",
       q4: "Are the 9 cats real?",
       a4: "100% real, lovingly rescued living beings. Gatito, Naranjosa, Tomy, Manchas, and the 5 newborns live under the daily personal care of Mr. Gean. The Dubai luxury aesthetic is our dignified and cheerful celebration to inspire true generosity without pity."
     },
@@ -613,6 +596,8 @@ const I18N = {
       tagline: "The sanctuary where 9 royal feline souls are cherished and great patrons forge an eternal legacy of compassion.",
       navTitle: "Royal Navigation",
       contactTitle: "Official Contact",
+      location: "Lima, Peru (Sanctuary Headquarters)",
+      audiences: "Audiences with Mr. Gean & Royal Court by appointment",
       disclaimerTitle: "📜 Royal Transparency Decree:",
       disclaimerText: "Al-Meow Palace is an independent initiative founded by Mr. Gean exclusively to nourish, protect, and provide lifelong care to 9 rescued cats, and build the Farm Sanctuary. No cats were forced to wear actual solid gold crowns during site creation.",
       copyText: "All rights purred and reserved across the seven emirates.",
@@ -788,48 +773,35 @@ const I18N = {
       paypalSub: "تبرع فوري عبر بطاقات الائتمان أو رصيد باي بال العالمي",
       paypalDesc: "الوسيلة الأسرع والأكثر أماناً للمحسنين من مختلف دول العالم، مع حماية كاملة للمتبرع وتأكيد فوري.",
       paypalEmailLabel: "البريد الرسمي المعتمد للباي بال:",
-      paypalBtn: "تقديم التبرع عبر PayPal.Me",
-      wireTitle: "تحويل بنكي دولي (USD Wire Transfer)",
-      wireSub: "بنك الائتمان البيروفي (BCP) • للتحويلات المباشرة من دبي والخليج والعالم",
-      wireDesc: "القناة المصرفية الراقية لأصحاب الهمم العالية والتحويلات المباشرة عبر رمز السويفت الدولي (SWIFT/BIC).",
-      bankNameLabel: "البنك المستلم:",
-      bankNameValue: "Banco de Crédito del Perú (BCP) - Lima, Peru",
-      beneficiaryLabel: "اسم صاحب الحساب (المستفيد):",
-      swiftLabel: "رمز السويفت الدولي (SWIFT / BIC):",
-      accountUsdLabel: "رقم الحساب بالدولار الأمريكي (USD):",
-      cciUsdLabel: "الرمز البنكي الدولي المشترك (CCI):",
+      paypalBtn: "تقديم التبرع عبر PayPal",
       cryptoTitle: "العملات المشفرة / ويب 3 كبار الشخصيات",
-      cryptoSub: "USDT • بيتكوين • بينانس باي",
+      cryptoSub: "USDT (TRC20) • بيتكوين (BTC)",
       cryptoBadge: "فوري • بلا حدود",
       cryptoDesc: "الخيار الأمثل لكبار المحسنين لتقديم مبالغ كبرى من 10,000$ إلى 1,000,000$ دولار دون قيود مصرفية أو حدود جغرافية.",
       cryptoNetworkLabel: "الشبكة المعتمدة:",
       cryptoAddressLabel: "عنوان محفظة USDT:",
       btcAddressLabel: "عنوان محفظة بيتكوين (BTC):",
-      binancePayIdLabel: "معرّف بينانس باي (Mr. Gean):",
-      usdtWarning: "⚠️ يُرجى التأكد من الإرسال عبر الشبكة المحددة حصراً (TRC20 أو BEP20).",
+      usdtWarning: "⚠️ يُرجى التأكد من الإرسال عبر شبكة ترون (TRC20) حصراً.",
       btcWarning: "⚠️ أرسل بيتكوين الأصلي (BTC) فقط إلى هذا العنوان.",
-      binanceWarning: "✦ تحويل فوري ومباشر بين حسابات بينانس بدون أي رسوم شبكة (0% رسوم).",
       qrScanCrypto: "امسح الرمز لإيداع USDT",
       qrScanBtc: "امسح الرمز لإيداع بيتكوين",
-      qrScanBinance: "امسح الرمز عبر تطبيق بينانس",
       copiedCryptoToast: "تم نسخ العنوان إلى الحافظة يا حبيبي! 💎⚡",
       copy: "نسخ",
       copiedToast: "تم النسخ إلى الحافظة يا حبيبي! 👑",
-      peruAccordionTitle: "🇵🇪 هل تتبرع من داخل بيرو؟ (Yape / BCP Soles)",
-      peruAccordionDesc: "إذا كنت ترغب في تقديم مساهمتك بالعملة المحلية داخل بيرو، افتح هذا القسم للتحويل عبر محفظة Yape أو حساب BCP Soles:",
-      yapeTitle: "محفظة Yape الإلكترونية (بيرو)",
-      yapeSub: "تحويل فوري بدون رسوم بالعملة المحلية (PEN)",
-      phoneLabel: "رقم هاتف Yape:",
-      qrCaption: "امسح الرمز عبر تطبيق Yape",
-      bcpSolesTitle: "حساب التوفير بالسول البيروفي (BCP Soles)",
+      peruAccordionTitle: "🇵🇪 هل تتبرع من داخل بيرو؟ (حسابات BCP بالعملة المحلية)",
+      peruAccordionDesc: "إذا كنت ترغب في تقديم مساهمتك بالعملة المحلية داخل بيرو، يمكنك التحويل إلى أي من حسابي BCP بالسول:",
+      bcpAccount1Title: "حساب توفير BCP سول ١",
+      bcpAccount2Title: "حساب توفير BCP سول ٢",
+      bcpSubtitle: "بنك الائتمان البيروفي • بالعملة المحلية (PEN)",
+      beneficiaryLabel: "اسم صاحب الحساب (المستفيد):",
       bcpSolesLabel: "رقم الحساب بالسول (PEN):",
       bcpSolesCciLabel: "الرمز البنكي المشترك (CCI Soles):",
       claimBadge: "👑 ديوان اللقاء بمستر جيان والبلاط الملكي",
       claimTitle: "هل أرسلت جزيتك الملكية بالفعل؟",
       claimSubtitle: "طالب بمكانك على عرش الشيوخ وبحق تسمية جناحك في مزرعة الملاذ. أرسل إشعار التحويل مع لقبك المفضل وعلم دولتك.",
-      claimThroneBtn: "المطالبة بمكاني على العرش",
-      claimEmailBtn: "إرسال الإشعار عبر البريد",
-      whatsappMsg: "السلام عليكم مستر جيان! أرسلت للتو جزية ملكية لرعاية القطط التسعة ودعم مزرعة ملاذ قصر المياو. مرفق إشعار التحويل للمطالبة بعرشي 👑"
+      claimThroneBtn: "أرسلت التبرع، المطالبة بمكاني على العرش",
+      emailSubject: "المطالبة بعرش الشيوخ - قصر المياو | مستر جيان",
+      emailBody: "السلام عليكم ورحمة الله وبركاته مستر جيان،\n\nأرسلت للتو جزية ملكية مباركة لدعم ورعاية القطط الملكية التسعة والمساهمة في تأسيس مزرعة الملاذ الدائم.\n\nمرفق مع هذا البريد إشعار التحويل الرسمي، مع بياناتي الخاصة لتسجيلي على عرش الشيوخ:\n- الاسم أو اللقب الملكي (شيخ، سلطان، أو أمير): \n- الدولة أو العلم: \n- قيمة التبرع والوسيلة المستخدمة: \n\nعاش قصر المياو ودامت البركة والرحمة!"
     },
     faq: {
       tag: "✦ الشفافية والمصداقية ✦",
@@ -840,7 +812,7 @@ const I18N = {
       q2: "ما هي مزرعة الملاذ وما هي الحقوق الممنوحة للمتبرع؟",
       a2: "هي حلم العمر لمستر جيان: أرض ريفية واسعة ومحمية لتعيش فيها هذه القطط ومئات القطط المنقذة في حرية تامة ودون أقفاص مدى الحياة. التبرع بـ 10,000$ يحفر اسمك على جدار الشرف الفعلي، والتبرع بـ 100,000$ أو 1,000,000$ يمنحك حق تسمية الجناح الرئيسي أو الملاذ بالكامل باسمك الشريف.",
       q3: "كيف أظهر على منصة الشيوخ وأحصل على لقبي؟",
-      a3: "بمجرد إتمام التبرع عبر باي بال أو التحويل البنكي الدولي أو يابي، اضغط على زر 'المطالبة بمكاني على العرش' وأرسل إشعار التحويل إلى مستر جيان مع اسمك أو لقبك المفضل وعلم دولتك لتحديث المنصة فوراً.",
+      a3: "بمجرد إتمام التبرع عبر العملات المشفرة أو باي بال أو بنك BCP، اضغط على زر 'أرسلت التبرع، المطالبة بمكاني على العرش' وأرسل إشعار التحويل عبر البريد إلى مستر جيان مع اسمك أو لقبك المفضل وعلم دولتك لتحديث المنصة فوراً.",
       q4: "هل القطط التسعة حقيقية أم مجرد فكرة ترويجية؟",
       a4: "هي قطط حقيقية 100% تعيش برعاية مستر جيان الشخصية. وفكرة فخامة دبي وألقاب الشيوخ هي أسلوبنا الراقي المبهج لاستنهاض الكرم والرحمة دون اللجوء للاستجداء الحزين."
     },
@@ -848,6 +820,8 @@ const I18N = {
       tagline: "الملاذ الذي تُكرّم فيه 9 أرواح سنورية ويصنع فيه كبار المحسنين إرثاً أبدياً من الرحمة والبركة.",
       navTitle: "التنقل الملكي",
       contactTitle: "التواصل الرسمي",
+      location: "ليما، بيرو (المقر الرئيسي للملاذ الملكي)",
+      audiences: "اللقاءات والمقابلات مع مستر جيان والبلاط بموعد مسبق",
       disclaimerTitle: "📜 مرسوم الشفافية الملكي:",
       disclaimerText: "قصر المياو مبادرة إنسانية مستقلة أسسها مستر جيان لإنقاذ ورعاية 9 قطط وبناء مزرعة الملاذ الدائم. لم يُجبر أي قط على ارتداء تيجان ذهبية حقيقية أثناء تطوير هذا الموقع.",
       copyText: "جميع حقوق الخرخرة محفوظة في الإمارات السبع وسائر البلدان.",
@@ -907,7 +881,7 @@ function setLanguage(lang) {
   renderLeaderboardPodium();
   renderLeaderboardTable();
   updateCalculatorMetrics(currentTierIndex);
-  updateWhatsAppLink();
+  updateEmailClaimLink();
 
   // Save preference
   try {
@@ -1199,7 +1173,7 @@ function initPaymentVault() {
   // Populate configurable values from PAYMENT_CONFIG
   populatePaymentConfig();
 
-  // Crypto internal tabs switching
+  // Crypto internal tabs switching (USDT / BTC)
   document.querySelectorAll('.crypto-tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const selectedTab = btn.getAttribute('data-crypto-tab');
@@ -1210,7 +1184,7 @@ function initPaymentVault() {
         b.setAttribute('aria-selected', isActive ? 'true' : 'false');
       });
 
-      const panes = ['usdt', 'btc', 'binance'];
+      const panes = ['usdt', 'btc'];
       panes.forEach(pane => {
         const paneEl = document.getElementById(`crypto-pane-${pane}`);
         if (paneEl) {
@@ -1228,7 +1202,7 @@ function initPaymentVault() {
 
       if (targetEl) {
         const textToCopy = targetEl.textContent.trim();
-        const isCrypto = targetId && (targetId.includes('usdt') || targetId.includes('btc') || targetId.includes('binance'));
+        const isCrypto = targetId && (targetId.includes('usdt') || targetId.includes('btc'));
         copyToClipboard(textToCopy, isCrypto);
       }
     });
@@ -1245,17 +1219,23 @@ function populatePaymentConfig() {
   setEl('val-usdt-address', PAYMENT_CONFIG.usdtAddress);
   setEl('val-usdt-network', PAYMENT_CONFIG.usdtNetwork);
   setEl('val-btc-address', PAYMENT_CONFIG.btcAddress);
-  setEl('val-binance-pay-id', PAYMENT_CONFIG.binancePayId);
+  setEl('val-btc-network', PAYMENT_CONFIG.btcNetwork);
 
   // Fiat & Bank fields
   setEl('val-paypal-email', PAYMENT_CONFIG.paypalEmail);
-  setEl('val-wire-beneficiary', PAYMENT_CONFIG.beneficiaryName);
-  setEl('val-bcp-swift', PAYMENT_CONFIG.bcpSwift);
-  setEl('val-bcp-usd', PAYMENT_CONFIG.bcpAccountUsd);
-  setEl('val-bcp-cci-usd', PAYMENT_CONFIG.bcpCciUsd);
-  setEl('val-yape-phone', PAYMENT_CONFIG.yapePhone);
-  setEl('val-bcp-soles', PAYMENT_CONFIG.bcpAccountSoles);
-  setEl('val-bcp-cci-soles', PAYMENT_CONFIG.bcpCciSoles);
+  setEl('val-wire-beneficiary-1', PAYMENT_CONFIG.beneficiaryName);
+  setEl('val-wire-beneficiary-2', PAYMENT_CONFIG.beneficiaryName);
+  setEl('val-footer-email', PAYMENT_CONFIG.officialEmail);
+  setEl('val-bcp-soles-1', PAYMENT_CONFIG.bcpAccountSoles1);
+  setEl('val-bcp-cci-soles-1', PAYMENT_CONFIG.bcpCciSoles1);
+  setEl('val-bcp-soles-2', PAYMENT_CONFIG.bcpAccountSoles2);
+  setEl('val-bcp-cci-soles-2', PAYMENT_CONFIG.bcpCciSoles2);
+
+  // Update dynamic PayPal link
+  const paypalBtn = document.getElementById('paypal-donate-btn');
+  if (paypalBtn && PAYMENT_CONFIG.paypalUrl) {
+    paypalBtn.href = PAYMENT_CONFIG.paypalUrl;
+  }
 }
 
 function copyToClipboard(text, isCrypto = false) {
@@ -1315,15 +1295,18 @@ function showToast(message) {
 }
 
 /* ==============================================================================
-   10. WHATSAPP CLAIM THRONE LINK UPDATE
+   10. EMAIL CLAIM THRONE LINK UPDATE (DYNAMIC MAILTO)
    ============================================================================== */
-function updateWhatsAppLink() {
-  const waBtn = document.getElementById('claim-whatsapp-btn');
-  if (!waBtn) return;
+function updateEmailClaimLink() {
+  const claimBtn = document.getElementById('claim-throne-btn');
+  if (!claimBtn) return;
 
-  const msg = I18N[currentLang].vault.whatsappMsg;
-  const encodedMsg = encodeURIComponent(msg);
-  waBtn.href = `https://wa.me/51987654321?text=${encodedMsg}`;
+  const emailDict = I18N[currentLang].vault;
+  const subject = encodeURIComponent(emailDict.emailSubject);
+  const body = encodeURIComponent(emailDict.emailBody);
+  const targetEmail = PAYMENT_CONFIG.officialEmail || "donacionparagatitos@gmail.com";
+
+  claimBtn.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
 }
 
 /* ==============================================================================

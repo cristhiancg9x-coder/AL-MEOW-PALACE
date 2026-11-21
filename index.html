@@ -18,7 +18,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/favicon.svg">
 
-  <!-- Open Graph / Facebook / WhatsApp -->
+  <!-- Open Graph / Social Sharing (WhatsApp, Telegram, X) -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://TU-DOMINIO.vercel.app/">
   <meta property="og:site_name" content="Al-Meow Palace">
@@ -752,7 +752,95 @@
              ==================================================== -->
         <div class="payment-grid-international">
 
-          <!-- 1. PAYPAL INTERNACIONAL -->
+          <!-- 1. CRIPTOMONEDAS / WEB3 VIP (USDT TRC20 / BITCOIN BTC) -->
+          <article class="payment-card glass-panel crypto-card-theme" data-method="crypto">
+            <div class="payment-card-header">
+              <div class="payment-brand">
+                <span class="payment-badge-icon">⚡</span>
+                <div>
+                  <h3 class="payment-title" data-i18n="vault.cryptoTitle">Criptomonedas / Web3 VIP</h3>
+                  <span class="payment-subtitle" data-i18n="vault.cryptoSub">USDT (TRC20) • Bitcoin (BTC)</span>
+                </div>
+              </div>
+              <span class="currency-tag crypto-tag" data-i18n="vault.cryptoBadge">Instantáneo • Sin Límites</span>
+            </div>
+
+            <p class="payment-description" data-i18n="vault.cryptoDesc">
+              Ideal para grandes ofrendas sin límites bancarios ni restricciones geográficas. Transferencias directas de $10,000 a $1,000,000 USD con confirmación inmediata.
+            </p>
+
+            <!-- Internal Tabs for Crypto Selection (2 Tabs) -->
+            <div class="crypto-tabs-bar" role="tablist" aria-label="Monedas Cripto">
+              <button type="button" class="crypto-tab-btn active" role="tab" aria-selected="true" data-crypto-tab="usdt">
+                <span>USDT (TRC20)</span>
+              </button>
+              <button type="button" class="crypto-tab-btn" role="tab" aria-selected="false" data-crypto-tab="btc">
+                <span>Bitcoin (BTC)</span>
+              </button>
+            </div>
+
+            <!-- TAB PANE 1: USDT (Tron TRC20) -->
+            <div class="crypto-pane" id="crypto-pane-usdt">
+              <div class="crypto-network-row">
+                <span class="field-label" data-i18n="vault.cryptoNetworkLabel">Red Soportada:</span>
+                <span class="crypto-network-badge" id="val-usdt-network">Tron (TRC20)</span>
+              </div>
+
+              <div class="crypto-qr-center">
+                <figure class="crypto-qr-figure">
+                  <img src="assets/qr-usdt.jpeg" alt="Código QR depósito USDT Mr. Gean" class="crypto-qr-img" width="140" height="140" loading="lazy">
+                  <figcaption class="qr-caption" data-i18n="vault.qrScanCrypto">Escanear para depositar USDT</figcaption>
+                </figure>
+              </div>
+
+              <div class="payment-field-group">
+                <label class="field-label" data-i18n="vault.cryptoAddressLabel">Dirección de Billetera USDT:</label>
+                <div class="copy-field-box">
+                  <span class="field-value font-mono" id="val-usdt-address">TPQxqrk4vTg7uvPciY3PLF3LaeCobEQvyf</span>
+                  <button type="button" class="btn-copy" data-copy-target="val-usdt-address" aria-label="Copiar dirección USDT">
+                    <span class="copy-text" data-i18n="vault.copy">Copiar</span>
+                    <span class="copy-icon">📋</span>
+                  </button>
+                </div>
+              </div>
+
+              <p class="crypto-warning-note" data-i18n="vault.usdtWarning">
+                ⚠️ Asegúrate de enviar únicamente por la red Tron (TRC20).
+              </p>
+            </div>
+
+            <!-- TAB PANE 2: BITCOIN (BTC) -->
+            <div class="crypto-pane" id="crypto-pane-btc" style="display: none;">
+              <div class="crypto-network-row">
+                <span class="field-label" data-i18n="vault.cryptoNetworkLabel">Red Soportada:</span>
+                <span class="crypto-network-badge" id="val-btc-network">Bitcoin (BTC)</span>
+              </div>
+
+              <div class="crypto-qr-center">
+                <figure class="crypto-qr-figure">
+                  <img src="assets/qr-btc.jpeg" alt="Código QR depósito Bitcoin Mr. Gean" class="crypto-qr-img" width="140" height="140" loading="lazy">
+                  <figcaption class="qr-caption" data-i18n="vault.qrScanBtc">Escanear para depositar Bitcoin</figcaption>
+                </figure>
+              </div>
+
+              <div class="payment-field-group">
+                <label class="field-label" data-i18n="vault.btcAddressLabel">Dirección de Billetera Bitcoin (BTC):</label>
+                <div class="copy-field-box">
+                  <span class="field-value font-mono" id="val-btc-address">16knqtZoFVvfWaUUFMAmm13T6vsdrCDGdd</span>
+                  <button type="button" class="btn-copy" data-copy-target="val-btc-address" aria-label="Copiar dirección BTC">
+                    <span class="copy-text" data-i18n="vault.copy">Copiar</span>
+                    <span class="copy-icon">📋</span>
+                  </button>
+                </div>
+              </div>
+
+              <p class="crypto-warning-note" data-i18n="vault.btcWarning">
+                ⚠️ Envía únicamente Bitcoin nativo (BTC) a esta dirección.
+              </p>
+            </div>
+          </article>
+
+          <!-- 2. PAYPAL INTERNACIONAL -->
           <article class="payment-card glass-panel" data-method="paypal">
             <div class="payment-card-header">
               <div class="payment-brand">
@@ -772,7 +860,7 @@
             <div class="payment-field-group">
               <label class="field-label" data-i18n="vault.paypalEmailLabel">Correo Oficial de PayPal:</label>
               <div class="copy-field-box">
-                <span class="field-value font-mono" id="val-paypal-email">mrgean@almeowpalace.com</span>
+                <span class="field-value font-mono" id="val-paypal-email">zqpswe@gmail.com</span>
                 <button type="button" class="btn-copy" data-copy-target="val-paypal-email" aria-label="Copiar correo de PayPal">
                   <span class="copy-text" data-i18n="vault.copy">Copiar</span>
                   <span class="copy-icon">📋</span>
@@ -781,274 +869,42 @@
             </div>
 
             <div class="payment-actions">
-              <a href="https://paypal.me/MrGean" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-block" data-i18n="vault.paypalBtn">
-                <span>Ofrendar vía PayPal.Me</span>
+              <a href="https://www.paypal.com/donate/?business=zqpswe@gmail.com&currency_code=USD" id="paypal-donate-btn" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-block" data-i18n="vault.paypalBtn">
+                <span>Ofrendar vía PayPal</span>
                 <span class="btn-external">↗</span>
               </a>
-            </div>
-          </article>
-
-          <!-- 2. TRANSFERENCIA BANCARIA INTERNACIONAL (BCP USD WIRE TRANSFER) -->
-          <article class="payment-card glass-panel wire-card-theme" data-method="bcp-usd">
-            <div class="payment-card-header">
-              <div class="payment-brand">
-                <span class="payment-badge-icon">🏛️</span>
-                <div>
-                  <h3 class="payment-title" data-i18n="vault.wireTitle">Transferencia Bancaria Internacional (USD Wire Transfer)</h3>
-                  <span class="payment-subtitle" data-i18n="vault.wireSub">Banco de Crédito del Perú (BCP) • Para donaciones desde Dubái y todo el mundo</span>
-                </div>
-              </div>
-              <span class="currency-tag swift-tag">SWIFT WIRE</span>
-            </div>
-
-            <p class="payment-description" data-i18n="vault.wireDesc">
-              Canal bancario de ultra-confianza para magnates y transferencias internacionales directas vía código SWIFT/BIC.
-            </p>
-
-            <!-- Bank Name -->
-            <div class="payment-field-group">
-              <label class="field-label" data-i18n="vault.bankNameLabel">Banco Receptor:</label>
-              <p class="field-value-text" data-i18n="vault.bankNameValue">Banco de Crédito del Perú (BCP) - Lima, Perú</p>
-            </div>
-
-            <!-- Beneficiary Name -->
-            <div class="payment-field-group">
-              <label class="field-label" data-i18n="vault.beneficiaryLabel">Nombre del Titular (Beneficiario):</label>
-              <div class="copy-field-box">
-                <span class="field-value font-mono" id="val-wire-beneficiary">Mr. Gean</span>
-                <button type="button" class="btn-copy" data-copy-target="val-wire-beneficiary" aria-label="Copiar titular de la cuenta">
-                  <span class="copy-text" data-i18n="vault.copy">Copiar</span>
-                  <span class="copy-icon">📋</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- SWIFT / BIC Code -->
-            <div class="payment-field-group">
-              <label class="field-label" data-i18n="vault.swiftLabel">Código SWIFT / BIC:</label>
-              <div class="copy-field-box">
-                <span class="field-value font-mono" style="color: #34D399; font-weight: 800;" id="val-bcp-swift">BCPLPEPL</span>
-                <button type="button" class="btn-copy" data-copy-target="val-bcp-swift" aria-label="Copiar código SWIFT">
-                  <span class="copy-text" data-i18n="vault.copy">Copiar</span>
-                  <span class="copy-icon">📋</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- USD Account Number -->
-            <div class="payment-field-group">
-              <label class="field-label" data-i18n="vault.accountUsdLabel">Número de Cuenta Dólares (USD):</label>
-              <div class="copy-field-box">
-                <span class="field-value font-mono" id="val-bcp-usd">193-87654321-1-42</span>
-                <button type="button" class="btn-copy" data-copy-target="val-bcp-usd" aria-label="Copiar cuenta BCP dólares">
-                  <span class="copy-text" data-i18n="vault.copy">Copiar</span>
-                  <span class="copy-icon">📋</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- CCI Interbank Code -->
-            <div class="payment-field-group">
-              <label class="field-label" data-i18n="vault.cciUsdLabel">Código Interbancario CCI (USD):</label>
-              <div class="copy-field-box">
-                <span class="field-value font-mono" id="val-bcp-cci-usd">00219318765432114218</span>
-                <button type="button" class="btn-copy" data-copy-target="val-bcp-cci-usd" aria-label="Copiar CCI interbancario dólares">
-                  <span class="copy-text" data-i18n="vault.copy">Copiar</span>
-                  <span class="copy-icon">📋</span>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- 3. CRIPTOMONEDAS / WEB3 VIP (BINANCE / USDT / BTC) -->
-          <article class="payment-card glass-panel crypto-card-theme" data-method="crypto">
-            <div class="payment-card-header">
-              <div class="payment-brand">
-                <span class="payment-badge-icon">⚡</span>
-                <div>
-                  <h3 class="payment-title" data-i18n="vault.cryptoTitle">Criptomonedas / Web3 VIP</h3>
-                  <span class="payment-subtitle" data-i18n="vault.cryptoSub">USDT • Bitcoin • Binance Pay</span>
-                </div>
-              </div>
-              <span class="currency-tag crypto-tag" data-i18n="vault.cryptoBadge">Instantáneo • Sin Límites</span>
-            </div>
-
-            <p class="payment-description" data-i18n="vault.cryptoDesc">
-              Ideal para grandes ofrendas sin límites bancarios ni restricciones geográficas. Transferencias directas de $10,000 a $1,000,000 USD con confirmación inmediata.
-            </p>
-
-            <!-- Internal Tabs for Crypto Selection -->
-            <div class="crypto-tabs-bar" role="tablist" aria-label="Monedas Cripto">
-              <button type="button" class="crypto-tab-btn active" role="tab" aria-selected="true" data-crypto-tab="usdt">
-                <span>USDT</span>
-              </button>
-              <button type="button" class="crypto-tab-btn" role="tab" aria-selected="false" data-crypto-tab="btc">
-                <span>Bitcoin (BTC)</span>
-              </button>
-              <button type="button" class="crypto-tab-btn" role="tab" aria-selected="false" data-crypto-tab="binance">
-                <span>Binance Pay</span>
-              </button>
-            </div>
-
-            <!-- TAB PANE 1: USDT (Tether) -->
-            <div class="crypto-pane" id="crypto-pane-usdt">
-              <div class="crypto-network-row">
-                <span class="field-label" data-i18n="vault.cryptoNetworkLabel">Red Soportada:</span>
-                <span class="crypto-network-badge" id="val-usdt-network">TRC20 / BEP20 (USDT)</span>
-              </div>
-
-              <div class="crypto-qr-center">
-                <figure class="crypto-qr-figure">
-                  <img src="assets/qr-crypto.svg" alt="Código QR depósito USDT Mr. Gean" class="crypto-qr-img" width="140" height="140" loading="lazy">
-                  <figcaption class="qr-caption" data-i18n="vault.qrScanCrypto">Escanear para depositar USDT</figcaption>
-                </figure>
-              </div>
-
-              <div class="payment-field-group">
-                <label class="field-label" data-i18n="vault.cryptoAddressLabel">Dirección de Billetera USDT:</label>
-                <div class="copy-field-box">
-                  <span class="field-value font-mono" id="val-usdt-address">TY7eKx9Pq2W8mN4vLtZ5rD1sX3cF6hG8jK</span>
-                  <button type="button" class="btn-copy" data-copy-target="val-usdt-address" aria-label="Copiar dirección USDT">
-                    <span class="copy-text" data-i18n="vault.copy">Copiar</span>
-                    <span class="copy-icon">📋</span>
-                  </button>
-                </div>
-              </div>
-
-              <p class="crypto-warning-note" data-i18n="vault.usdtWarning">
-                ⚠️ Asegúrate de enviar solo por la red indicada (TRC20 o BEP20).
-              </p>
-            </div>
-
-            <!-- TAB PANE 2: BITCOIN (BTC) -->
-            <div class="crypto-pane" id="crypto-pane-btc" style="display: none;">
-              <div class="crypto-network-row">
-                <span class="field-label" data-i18n="vault.cryptoNetworkLabel">Red Soportada:</span>
-                <span class="crypto-network-badge">Bitcoin Core (BTC Native)</span>
-              </div>
-
-              <div class="crypto-qr-center">
-                <figure class="crypto-qr-figure">
-                  <img src="assets/qr-crypto.svg" alt="Código QR depósito Bitcoin Mr. Gean" class="crypto-qr-img" width="140" height="140" loading="lazy">
-                  <figcaption class="qr-caption" data-i18n="vault.qrScanBtc">Escanear para depositar Bitcoin</figcaption>
-                </figure>
-              </div>
-
-              <div class="payment-field-group">
-                <label class="field-label" data-i18n="vault.btcAddressLabel">Dirección de Billetera Bitcoin (BTC):</label>
-                <div class="copy-field-box">
-                  <span class="field-value font-mono" id="val-btc-address">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</span>
-                  <button type="button" class="btn-copy" data-copy-target="val-btc-address" aria-label="Copiar dirección BTC">
-                    <span class="copy-text" data-i18n="vault.copy">Copiar</span>
-                    <span class="copy-icon">📋</span>
-                  </button>
-                </div>
-              </div>
-
-              <p class="crypto-warning-note" data-i18n="vault.btcWarning">
-                ⚠️ Envía únicamente Bitcoin nativo (BTC) a esta dirección.
-              </p>
-            </div>
-
-            <!-- TAB PANE 3: BINANCE PAY (0% FEE) -->
-            <div class="crypto-pane" id="crypto-pane-binance" style="display: none;">
-              <div class="crypto-network-row">
-                <span class="field-label" data-i18n="vault.cryptoNetworkLabel">Método:</span>
-                <span class="crypto-network-badge" style="color: #F0B90B; border-color: #F0B90B; background: rgba(240, 185, 11, 0.15);">Binance Pay (0% Fee)</span>
-              </div>
-
-              <div class="crypto-qr-center">
-                <figure class="crypto-qr-figure">
-                  <img src="assets/qr-crypto.svg" alt="Código QR Binance Pay Mr. Gean" class="crypto-qr-img" width="140" height="140" loading="lazy">
-                  <figcaption class="qr-caption" data-i18n="vault.qrScanBinance">Escanear con Binance App</figcaption>
-                </figure>
-              </div>
-
-              <div class="payment-field-group">
-                <label class="field-label" data-i18n="vault.binancePayIdLabel">Binance Pay ID (Mr. Gean):</label>
-                <div class="copy-field-box">
-                  <span class="field-value font-mono" style="color: #F0B90B; font-weight: 800; font-size: 1.1rem;" id="val-binance-pay-id">847291045</span>
-                  <button type="button" class="btn-copy" data-copy-target="val-binance-pay-id" aria-label="Copiar Binance Pay ID">
-                    <span class="copy-text" data-i18n="vault.copy">Copiar</span>
-                    <span class="copy-icon">📋</span>
-                  </button>
-                </div>
-              </div>
-
-              <p class="crypto-warning-note" style="color: #FDE68A; background: rgba(240, 185, 11, 0.12); border-color: rgba(240, 185, 11, 0.35);" data-i18n="vault.binanceWarning">
-                ✦ Transferencia directa e instantánea entre cuentas Binance sin comisiones de red.
-              </p>
             </div>
           </article>
 
         </div>
 
         <!-- ====================================================
-             EN SEGUNDO PLANO: SECCIÓN DESPLEGABLE LOCAL PERÚ (YAPE / BCP SOLES)
+             EN SEGUNDO PLANO: SECCIÓN DESPLEGABLE LOCAL PERÚ (BCP SOLES)
              ==================================================== -->
         <div class="peru-accordion-wrapper">
           <details class="peru-accordion glass-panel">
             <summary class="peru-accordion-summary">
               <div class="peru-summary-content">
                 <span style="font-size: 1.4rem;">🇵🇪</span>
-                <span data-i18n="vault.peruAccordionTitle">¿Apoyas desde Perú? (Yape / BCP Soles)</span>
+                <span data-i18n="vault.peruAccordionTitle">¿Apoyas desde Perú? (Cuentas BCP Soles)</span>
               </div>
               <span class="peru-accordion-icon" aria-hidden="true">▼</span>
             </summary>
 
             <div class="peru-accordion-body">
               <p class="peru-accordion-lead" data-i18n="vault.peruAccordionDesc">
-                Si deseas enviar tu tributo en moneda local desde Perú, utiliza cualquiera de estos dos canales directos:
+                Si deseas enviar tu tributo en moneda local desde Perú, realiza tu transferencia a cualquiera de nuestras dos cuentas BCP en Soles:
               </p>
 
               <div class="peru-grid">
-                <!-- YAPE PERÚ -->
-                <article class="payment-card glass-panel" style="background: rgba(20, 16, 26, 0.7); border-color: rgba(131, 0, 227, 0.4);">
-                  <div class="payment-card-header">
-                    <div class="payment-brand">
-                      <span class="payment-badge-icon yape-purple">🟣</span>
-                      <div>
-                        <h4 class="payment-title" data-i18n="vault.yapeTitle">Billetera Digital Yape (Perú)</h4>
-                        <span class="payment-subtitle" data-i18n="vault.yapeSub">Transferencia instantánea en Soles sin comisiones</span>
-                      </div>
-                    </div>
-                    <span class="currency-tag pen-tag">PEN (S/.)</span>
-                  </div>
-
-                  <div class="yape-layout">
-                    <figure class="yape-qr-figure">
-                      <img src="assets/qr-yape.svg" alt="Código QR de Yape para tributos a Mr. Gean y los 9 gatitos" class="yape-qr-img" width="160" height="200" loading="lazy">
-                      <figcaption class="qr-caption" data-i18n="vault.qrCaption">Escanea con tu App Yape</figcaption>
-                    </figure>
-
-                    <div class="yape-details">
-                      <div class="payment-field-group">
-                        <label class="field-label" data-i18n="vault.beneficiaryLabel">Nombre del Titular:</label>
-                        <p class="field-value-text">Mr. Gean</p>
-                      </div>
-
-                      <div class="payment-field-group">
-                        <label class="field-label" data-i18n="vault.phoneLabel">Número Celular Yape:</label>
-                        <div class="copy-field-box">
-                          <span class="field-value font-mono" id="val-yape-phone">+51 987 654 321</span>
-                          <button type="button" class="btn-copy" data-copy-target="val-yape-phone" aria-label="Copiar teléfono de Yape">
-                            <span class="copy-text" data-i18n="vault.copy">Copiar</span>
-                            <span class="copy-icon">📋</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- BCP SOLES -->
+                <!-- BCP SOLES CUENTA 1 -->
                 <article class="payment-card glass-panel" style="background: rgba(26, 20, 14, 0.7); border-color: rgba(212, 175, 55, 0.3);">
                   <div class="payment-card-header">
                     <div class="payment-brand">
                       <span class="payment-badge-icon bcp-orange">🏛️</span>
                       <div>
-                        <h4 class="payment-title" data-i18n="vault.bcpSolesTitle">BCP Cuenta de Ahorros Soles (PEN)</h4>
-                        <span class="payment-subtitle">Transferencias bancarias locales en Soles</span>
+                        <h4 class="payment-title" data-i18n="vault.bcpAccount1Title">BCP Cuenta de Ahorros Soles 1</h4>
+                        <span class="payment-subtitle" data-i18n="vault.bcpSubtitle">Banco de Crédito del Perú • Soles</span>
                       </div>
                     </div>
                     <span class="currency-tag">PEN (S/.)</span>
@@ -1056,14 +912,14 @@
 
                   <div class="payment-field-group">
                     <label class="field-label" data-i18n="vault.beneficiaryLabel">Nombre del Titular:</label>
-                    <p class="field-value-text">Mr. Gean</p>
+                    <p class="field-value-text" id="val-wire-beneficiary-1">Mr. Gean</p>
                   </div>
 
                   <div class="payment-field-group">
                     <label class="field-label" data-i18n="vault.bcpSolesLabel">Número de Cuenta Soles:</label>
                     <div class="copy-field-box">
-                      <span class="field-value font-mono" id="val-bcp-soles">193-98765432-0-15</span>
-                      <button type="button" class="btn-copy" data-copy-target="val-bcp-soles" aria-label="Copiar cuenta BCP soles">
+                      <span class="field-value font-mono" id="val-bcp-soles-1">21504187354046</span>
+                      <button type="button" class="btn-copy" data-copy-target="val-bcp-soles-1" aria-label="Copiar cuenta BCP soles 1">
                         <span class="copy-text" data-i18n="vault.copy">Copiar</span>
                         <span class="copy-icon">📋</span>
                       </button>
@@ -1071,10 +927,51 @@
                   </div>
 
                   <div class="payment-field-group">
-                    <label class="field-label" data-i18n="vault.bcpSolesCciLabel">Código Interbancario Soles (CCI):</label>
+                    <label class="field-label" data-i18n="vault.bcpSolesCciLabel">Código Interbancario (CCI):</label>
                     <div class="copy-field-box">
-                      <span class="field-value font-mono" id="val-bcp-cci-soles">00219319876543201588</span>
-                      <button type="button" class="btn-copy" data-copy-target="val-bcp-cci-soles" aria-label="Copiar CCI soles">
+                      <span class="field-value font-mono" id="val-bcp-cci-soles-1">00221510418735404625</span>
+                      <button type="button" class="btn-copy" data-copy-target="val-bcp-cci-soles-1" aria-label="Copiar CCI soles 1">
+                        <span class="copy-text" data-i18n="vault.copy">Copiar</span>
+                        <span class="copy-icon">📋</span>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- BCP SOLES CUENTA 2 -->
+                <article class="payment-card glass-panel" style="background: rgba(26, 20, 14, 0.7); border-color: rgba(212, 175, 55, 0.3);">
+                  <div class="payment-card-header">
+                    <div class="payment-brand">
+                      <span class="payment-badge-icon bcp-orange">🏛️</span>
+                      <div>
+                        <h4 class="payment-title" data-i18n="vault.bcpAccount2Title">BCP Cuenta de Ahorros Soles 2</h4>
+                        <span class="payment-subtitle" data-i18n="vault.bcpSubtitle">Banco de Crédito del Perú • Soles</span>
+                      </div>
+                    </div>
+                    <span class="currency-tag">PEN (S/.)</span>
+                  </div>
+
+                  <div class="payment-field-group">
+                    <label class="field-label" data-i18n="vault.beneficiaryLabel">Nombre del Titular:</label>
+                    <p class="field-value-text" id="val-wire-beneficiary-2">Mr. Gean</p>
+                  </div>
+
+                  <div class="payment-field-group">
+                    <label class="field-label" data-i18n="vault.bcpSolesLabel">Número de Cuenta Soles:</label>
+                    <div class="copy-field-box">
+                      <span class="field-value font-mono" id="val-bcp-soles-2">21599723814020</span>
+                      <button type="button" class="btn-copy" data-copy-target="val-bcp-soles-2" aria-label="Copiar cuenta BCP soles 2">
+                        <span class="copy-text" data-i18n="vault.copy">Copiar</span>
+                        <span class="copy-icon">📋</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="payment-field-group">
+                    <label class="field-label" data-i18n="vault.bcpSolesCciLabel">Código Interbancario (CCI):</label>
+                    <div class="copy-field-box">
+                      <span class="field-value font-mono" id="val-bcp-cci-soles-2">00221519972381402022</span>
+                      <button type="button" class="btn-copy" data-copy-target="val-bcp-cci-soles-2" aria-label="Copiar CCI soles 2">
                         <span class="copy-text" data-i18n="vault.copy">Copiar</span>
                         <span class="copy-icon">📋</span>
                       </button>
@@ -1086,7 +983,7 @@
           </details>
         </div>
 
-        <!-- Botón de Reclamo de Trono (WhatsApp / Email Prellenado) -->
+        <!-- Botón de Reclamo de Trono (Email Prellenado Dinámico) -->
         <div class="claim-throne-banner glass-panel">
           <div class="claim-throne-content text-center">
             <span class="claim-badge" data-i18n="vault.claimBadge">👑 AUDIENCIA CON MR. GEAN & LA CORTE</span>
@@ -1097,20 +994,12 @@
               Reclama tu posición en el Trono de los Jeques y el bautizo de tu espacio en la Finca Santuario. Envía tu comprobante con tu apodo nobiliario y bandera.
             </p>
             <div class="claim-actions">
-              <a href="https://wa.me/51987654321?text=¡Salam%20Aleikum%20Mr.%20Gean!%20Acabo%20de%20enviar%20un%20tributo%20real%20para%20los%209%20gatitos%20y%20la%20Finca%20Santuario%20de%20Al-Meow%20Palace.%20Adjunto%20mi%20comprobante%20para%20reclamar%20mi%20puesto%20en%20el%20Trono%20👑" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
+              <a href="mailto:donacionparagatitos@gmail.com" 
                  class="btn btn-gold btn-lg glow-pulse" 
-                 id="claim-whatsapp-btn"
+                 id="claim-throne-btn"
                  data-i18n="vault.claimThroneBtn">
-                <span>Reclamar mi lugar en el Trono</span>
-                <span class="btn-icon">📲</span>
-              </a>
-              <a href="mailto:mrgean@almeowpalace.com?subject=Tributo%20Real%20Al-Meow%20Palace&body=¡Salam%20Mr.%20Gean!%20Adjunto%20mi%20comprobante%20para%20reclamar%20mi%20puesto%20en%20el%20ranking%20y%20la%20Finca%20Santuario." 
-                 class="btn btn-glass btn-md"
-                 data-i18n="vault.claimEmailBtn">
-                <span>Enviar Comprobante por Correo</span>
-                <span class="btn-icon">✉️</span>
+                <span>Ya doné, reclamar mi lugar en el Trono</span>
+                <span class="btn-icon">👑</span>
               </a>
             </div>
           </div>
@@ -1217,14 +1106,19 @@
 
         <div class="footer-contact-col">
           <h4 class="footer-heading" data-i18n="footer.contactTitle">Contacto Oficial</h4>
+          <div class="footer-copy-box">
+            <span class="footer-mail-icon">✉️</span>
+            <a href="mailto:donacionparagatitos@gmail.com" id="val-footer-email">donacionparagatitos@gmail.com</a>
+            <button type="button" class="btn-copy btn-copy-sm" data-copy-target="val-footer-email" aria-label="Copiar correo oficial">
+              <span class="copy-text" data-i18n="vault.copy">Copiar</span>
+              <span class="copy-icon">📋</span>
+            </button>
+          </div>
           <p class="footer-contact-item">
-            <span>✉️</span> <a href="mailto:mrgean@almeowpalace.com">mrgean@almeowpalace.com</a>
+            <span>📍</span> <span data-i18n="footer.location">Lima, Perú (Sede Central del Santuario)</span>
           </p>
           <p class="footer-contact-item">
-            <span>📍</span> <span>Lima, Perú (Sede Central del Santuario)</span>
-          </p>
-          <p class="footer-contact-item">
-            <span>👑</span> <span>Audiencias con Mr. Gean & Corte Real previa cita</span>
+            <span>👑</span> <span data-i18n="footer.audiences">Audiencias con Mr. Gean & Corte Real previa cita</span>
           </p>
         </div>
       </div>
